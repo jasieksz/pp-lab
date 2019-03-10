@@ -46,12 +46,11 @@ def runner(communicator, payload_maxsize: int, send: Callable[[bytes], NoReturn]
     Measurement = namedtuple('Measurement', 'size, time, iterations')
     results: List[Measurement] = []
     
-
     for payload in generate_payload(payload_maxsize):
         mpi_barrier(communicator)
         start = mpi_get_time()
 
-        for i in range(iterations):
+        for _ in range(iterations):
             if rank == 0:
                 send(payload)
             elif rank == 1:
