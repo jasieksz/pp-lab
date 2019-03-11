@@ -15,6 +15,7 @@ def gen_lengths(max_len):
             x *= 1.14
 
 #%%
+# bandwidth timer
 if __name__ == "__main__":
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
@@ -59,3 +60,32 @@ if __name__ == "__main__":
         print 'size;bandwidth(reg);bandwidth(sync)'
         for r in results:
             print '%d;%f;%f' % (r[0], r[1], r[2])
+
+#%%
+# latency timer
+if __name__ == "__main__":
+    comm = MPI.COMM_WORLD
+    rank = comm.Get_rank()
+
+    iterations = 100
+    results = []
+    payload_bytes = bytearray(1)
+    gc.collect()
+
+    comm.Barrier()
+    start = MPI.Wtime()
+
+    for _ in xrange(iterations):
+        if rank == 0:
+            comm.send(payload_bytes, dest=1)
+        elif rank == 1:
+            comm.recv(source=0)
+
+    end = MPI.Wtime()
+    comm.Barrier()
+
+    results.append((end - start) / iterations)
+        
+    if rank == 0:
+        print '%f' % (results[0])
+
