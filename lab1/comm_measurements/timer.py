@@ -19,12 +19,12 @@ def generate_payload(power_size: int) -> Generator:
 #%%
 def send_function(communicator, send_mode: str):
     if (send_mode is 'sync'):
-        return lambda data: communicator.ssend(data, dest=1)
+        return lambda data: communicator.Ssend(data, dest=1)
     else:
-        return lambda data: communicator.send(data, dest=1)
+        return lambda data: communicator.Send(data, dest=1)
 
 def recevice_function(communicator, source: int):
-    return communicator.recv(source=source)
+    return communicator.Recv(source=source)
 
 #%%
 def get_mpi_communicator():
