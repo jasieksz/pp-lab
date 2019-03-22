@@ -15,7 +15,6 @@ def montecarlo_pi(size=100000):
 
 #%%
 if __name__ == "__main__":       
-    
     comm = MPI.COMM_WORLD
 
     data = 0
