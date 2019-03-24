@@ -1,6 +1,7 @@
 example/
 *.png
 *.html
+*.pdf
 
 # jsz
 .vscode
