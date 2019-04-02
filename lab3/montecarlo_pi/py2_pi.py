@@ -1,13 +1,15 @@
 #!/usr/bin/env python2
 import sys
 import numpy as np
+import random
 from mpi4py import MPI
 
 def points_inside_circle(iterations):
     inside_circle = 0
+    # local_random = random.Random()
     for _ in range(iterations):
-        point = np.random.random_sample(2)
-        if point[0]**2 + point[1]**2 < 1.0:
+        x, y = random.random(), random.random()
+        if x**2 + y**2 < 1.0:
                 inside_circle += 1
     return np.array(inside_circle, 'd')
 
