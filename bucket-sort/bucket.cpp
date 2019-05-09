@@ -85,10 +85,10 @@ float* bucketSort(float* data, int proc, int nPerProc, int buckPerProc)
         {
             
             float data = ((double) rand_r(&seed)) / RAND_MAX;
-            int bi = numberOfBuckets * data; // Index in bucket
+            int bi = numberOfBuckets * data;
             if (bi == numberOfBuckets) {
                 bi--; 
-            } // Hack to handle 1
+            } 
             #pragma omp critical 
             {
                 buckets[bi][bucketsIndexes[bi]] = data;

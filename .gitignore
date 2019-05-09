@@ -5,6 +5,7 @@ example/
 
 # jsz
 .vscode
+bucket-sort/sprawozdanie.ipynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
