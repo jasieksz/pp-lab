@@ -180,7 +180,7 @@ show(results[0], 'CPU', 'SpeedUp', 'Bucket_CPU', title='SpeedUp - CPU, alg. 1')
 showLess(results[2], 'Bucket_CPU', 'SpeedUp', title='SpeedUp - Buckets, alg. 1')
 
 #%% [markdown]
-##### Maksimum jest osiągane dla Bucket_CPU = 25000
+#### Maksimum jest osiągane dla Bucket_CPU = 25000
 
 #%% [markdown]
 ### Wyniki pomiarów dla algorytmu 2

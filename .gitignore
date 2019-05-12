@@ -6,7 +6,8 @@ example/
 # jsz
 .vscode
 bucket-sort/sprawozdanie.ipynb
-
+/lab3/montecarlo_pi/sznajd_pi.zip
+/lab3/montecarlo_pi/sznajd_pi/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
