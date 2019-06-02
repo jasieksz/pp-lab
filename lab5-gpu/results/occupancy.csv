@@ -1,0 +1,13 @@
+grid,block,occupancy,type,operation
+256,32,0.805053,global,update
+256,32,0.775694,global,copy
+512,32,0.776642,global,update
+512,32,0.741660,global,copy
+256,32,0.739530,texture,update
+256,32,0.744494,texture,copy
+512,32,0.705391,texture,update
+512,32,0.687109,texture,copy
+256,32,0.843108,shared,update
+256,32,0.770837,shared,copy
+512,32,0.877588,shared,update
+512,32,0.735567,shared,copy

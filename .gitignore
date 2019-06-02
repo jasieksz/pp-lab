@@ -2,6 +2,7 @@ example/
 *.png
 *.html
 *.pdf
+lab5-gpu/sprawozdanie.ipynb
 
 # jsz
 .vscode
